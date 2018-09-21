@@ -24,7 +24,12 @@ class IP_Interval:
 
 class Firewall:
     def __init__(self, path):
-
+        '''
+        Schema of the dictionary map:
+            {
+                {'inbound' : {'tcp' : {port : [IP_Intervals]}}, 'udp' : {port : [IP_Intervals]}}, 
+                {'outbound' : {'tcp' : {port : [IP_Intervals]}}, 'udp' : {port : [IP_Intervals]}}
+            }
         self.rules = { 'inbound' : {'tcp' : dict(), 'udp' : dict()},
                        'outbound' : {'tcp' : dict(), 'udp' : dict()}
                      }

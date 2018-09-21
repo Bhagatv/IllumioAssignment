@@ -30,6 +30,7 @@ class Firewall:
                 {'inbound' : {'tcp' : {port : [IP_Intervals]}}, 'udp' : {port : [IP_Intervals]}}, 
                 {'outbound' : {'tcp' : {port : [IP_Intervals]}}, 'udp' : {port : [IP_Intervals]}}
             }
+        '''
         self.rules = { 'inbound' : {'tcp' : dict(), 'udp' : dict()},
                        'outbound' : {'tcp' : dict(), 'udp' : dict()}
                      }

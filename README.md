@@ -1,4 +1,4 @@
-I tested my solution using the input rules in the PDF document and also by using the tests that were mentioned in the document.
+I tested my solution using the input rules in the PDF document and also by using the tests that were mentioned in the document. I created some of my own edge cases and large test cases, but it was difficult for me to test extremely large datasets.
 
 I noticed that the central component to the problem was figuring out the best data structure to use when storing the input rules to make accept_packet as optimal as possible without sacrificing too much space. I did this by using a dictionary (hashmap) where the directions would map to the protocol and then map to the ports. I stored individual ports in the dictionary (as opposed to intervals of ports) to help search time as well, but this would sacrifice some space as many ranges would have the same IP addresses. However, I stored all IP addresses as intervals defined by the IP_Interval class, as the ranges of IP Addresses could be incredibly large.
 
